@@ -1,0 +1,36 @@
+### auth_lab.http — Authentication Gauntlet Lab
+### Write your REST Client request blocks under each phase header.
+### Run a block with Ctrl+Alt+R (Windows/Linux) or Cmd+Alt+R (macOS).
+### Hint: all endpoints live under http://127.0.0.1:8000/api/
+### ─────────────────────────────────────────────────────────────────────────
+
+
+### ═══════════════════════════════════════════════════════════════════════════
+### PHASE 1 — Basic Authentication
+### ═══════════════════════════════════════════════════════════════════════════
+# TODO: Find the Basic Auth endpoint in api/urls.py.
+# TODO: Write a GET request that sends credentials using the
+#       Authorization: Basic <base64(username:password)> header.
+#       Tip: REST Client supports  Authorization: Basic admin admin123  directly.
+
+
+### ═══════════════════════════════════════════════════════════════════════════
+### PHASE 3 — Token Authentication (Opaque)
+### ═══════════════════════════════════════════════════════════════════════════
+# TODO: Generate a DRF token for the admin user first (see lab README).
+# TODO: Find the Token Auth endpoint in api/urls.py.
+# TODO: Write a GET request that sends the token using the
+#       Authorization: Token <your-token> header.
+
+
+### ═══════════════════════════════════════════════════════════════════════════
+### PHASE 4 — JSON Web Tokens (JWT)
+### ═══════════════════════════════════════════════════════════════════════════
+# TODO: Find the JWT login endpoint in api/urls.py.
+# TODO: Write a POST request with a JSON body containing username and password.
+# After sending, copy the "access" value from the response and paste it below:
+#   @accessToken = <paste the access token here>
+# TODO: Write a GET request to the protected JWT endpoint using:
+#       Authorization: Bearer {{accessToken}}
+# TODO: (Bonus) Write a POST request to refresh the access token using
+#       the refresh token from the login response.
