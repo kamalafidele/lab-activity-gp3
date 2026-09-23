@@ -14,7 +14,15 @@
 # +-------------------+------------+-----------+-------------------+----------+
 #
 # ─────────────────────────────────────────────────────────────────────────────
-
+# +-------------------+------------+-----------+-------------------+----------+
+# | Method            | Stateful?  | DB Lookup?| Credentials sent  | Safe on  |
+# |                   |            |           | every request?    | HTTP?    |
+# +-------------------+------------+-----------+-------------------+----------+
+# | Basic Auth        | No         | Yes       | Yes (password)    | No       |
+# | Session Auth      | Yes        | Yes       | No (session ID)   | No       |
+# | Opaque Token Auth | Yes        | Yes       | No (token)        | No       |
+# | JWT               | No         | No        | No (token)        | No       |
+# +-------------------+------------+-----------+-------------------+----------+
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import (
