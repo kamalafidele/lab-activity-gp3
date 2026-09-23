@@ -1,18 +1,7 @@
 # ─────────────────────────────────────────────────────────────────────────────
 # api/views.py — Authentication Gauntlet Lab
 #
-# Wrap-Up Comparison Table (Reporter fills this in at the end of the lab):
-#
-# +-------------------+------------+-----------+-------------------+----------+
-# | Method            | Stateful?  | DB Lookup?| Credentials sent  | Safe on  |
-# |                   |            |           | every request?    | HTTP?    |
-# +-------------------+------------+-----------+-------------------+----------+
-# | Basic Auth        |            |           |                   |          |
-# | Session Auth      |            |           |                   |          |
-# | Opaque Token Auth |            |           |                   |          |
-# | JWT               |            |           |                   |          |
-# +-------------------+------------+-----------+-------------------+----------+
-#
+
 # ─────────────────────────────────────────────────────────────────────────────
 # +-------------------+------------+-----------+-------------------+----------+
 # | Method            | Stateful?  | DB Lookup?| Credentials sent  | Safe on  |
@@ -23,6 +12,7 @@
 # | Opaque Token Auth | Yes        | Yes       | No (token)        | No       |
 # | JWT               | No         | No        | No (token)        | No       |
 # +-------------------+------------+-----------+-------------------+----------+
+
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import (
