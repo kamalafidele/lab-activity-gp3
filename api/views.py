@@ -52,8 +52,8 @@ def basic_auth_view(request):
 @permission_classes([IsAuthenticated])
 def session_auth_view(request):
     # Reporter — Phase 2 challenge answers:
-    # Q1 answer (effect of deleting the session cookie):
-    # Synthesis answer (how session fixation works):
+    # Q1 answer (effect of deleting the session cookie): After deleting the `sessionid` cookie, the server could no longer identify my session in the server-side session database, so it treated me as unauthenticated and redirected me to the login page.
+    # Synthesis answer (how session fixation works): Restoring the original `sessionid` cookie logged me back into the application, showing that an attacker who obtains a valid session ID can impersonate the user without knowing their password; this is called session hijacking.
 
     return Response({"message": "Session authenticated.", "user": request.user.username})
 
