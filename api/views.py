@@ -67,9 +67,9 @@ def session_auth_view(request):
 @permission_classes([IsAuthenticated])
 def token_auth_view(request):
     # Reporter — Phase 3 challenge answers:
-    # Q1 answer (status code when token is tampered):
-    # Q2 answer (algorithm used to hash admin's password in the DB):
-    # Synthesis answer (how to revoke a token):
+    # Q1 answer (status code when token is tampered): Tampered token returned 401 Unauthorized.
+    # Q2 answer (algorithm used to hash admin's password in the DB): pbkdf2_sha256$ . Passwords are stored as salted, iterated
+    # Synthesis answer (how to revoke a token):  one-way hashes so a database leak doesn't expose the actual passwords.
 
     return Response({"message": "Token authenticated.", "user": request.user.username})
 
