@@ -83,8 +83,12 @@ def token_auth_view(request):
 @permission_classes([IsAuthenticated])
 def jwt_protected_view(request):
     # Reporter — Phase 4 challenge answers:
-    # Q1 answer (fields found in the decoded payload):
-    # Q2 answer (what happens when the signature is tampered):
-    # Synthesis answer (JWT revocation challenge and workaround):
+                                           
+    # Q1 answer (fields found in the decoded payload): # Payload also contains: user_id (plus token_type and jti).
+    # Q2 answer (what happens when the signature is tampered):# The server validates the token by recomputing the signature with its secret
+                                                              
+    # Synthesis answer (JWT revocation challenge and workaround): # The server returned 401. The payload is just Base64-encoded JSON that anyone
+                                                                # can edit, but changing it invalidates the signature. Without the server's
+                                                                # secret key, the attacker can't produce a signature that matches, so the token is rejected.
 
     return Response({"message": "JWT authenticated.", "user": request.user.username})
