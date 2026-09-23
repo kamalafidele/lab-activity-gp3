@@ -39,8 +39,8 @@ def basic_auth_view(request):
     print(f"Incoming Header: {auth_header}")
     return Response({"message": "Check your terminal!"})
     # Reporter — Phase 1 challenge answers:
-    # Q1 answer (header format for admin:admin123):
-    # Q2 answer (what happens without credentials):
+    # Q1 answer (header format for admin:admin123):  <username>:<password>
+    # Q2 answer (what happens without credentials):   The requests can be intercepted easily
 
 
 # ─────────────────────────────────────────────────────────────────────────────
