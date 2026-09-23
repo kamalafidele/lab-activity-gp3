@@ -246,7 +246,7 @@ Now use it to hit a protected endpoint:
 ### Phase 4 — JWT Protected Request
 # Paste your access token below, replacing <ACCESS_TOKEN>
 GET http://127.0.0.1:8000/api/jwt/protected/ HTTP/1.1
-Authorization: Bearer <ACCESS_TOKEN>
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkwMjAxNzI2LCJpYXQiOjE3OTAxOTk5MjcsImp0aSI6ImQ0N2I1OWFhYjRlMTRhYjY5YzI2YzVjMDg3OWExNTlhIiwidXNlcl9pZCI6IjEifQ.gDBnfuJ4K4uk1ZIxM6nci0VfqXrf-fR_StYofJ9vziU
 ```
 
 ### Postman Operator Task
