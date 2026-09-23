@@ -24,7 +24,7 @@ Authorization: Basic YWRtaW46YWRtaW4xMjM=
 # TODO: Generate a DRF token for the admin user first (see lab README).
 # TODO: Find the Token Auth endpoint in api/urls.py.
 # TODO: Write a GET request that sends the token using the
-#       Authorization: Token <your-token> header.
+#       Authorization: Token 754cbcf8a576b2174eb3d702f5b3f3024fbdc771 header.
 
 
 ### ═══════════════════════════════════════════════════════════════════════════

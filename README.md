@@ -171,7 +171,7 @@ Add this block to `auth_lab.http`, replacing `<YOUR_TOKEN>` with the copied toke
 ```http
 ### Phase 3 — Opaque Token Auth
 GET http://127.0.0.1:8000/api/token/ HTTP/1.1
-Authorization: Token <YOUR_TOKEN>
+Authorization: Token 754cbcf8a576b2174eb3d702f5b3f3024fbdc771
 ```
 
 Send the request and confirm a 200 response.
@@ -181,7 +181,7 @@ Now tamper with the token by changing its last character and send again:
 ```http
 ### Phase 3 — Tampered Token
 GET http://127.0.0.1:8000/api/token/ HTTP/1.1
-Authorization: Token <YOUR_TOKEN_WITH_LAST_CHAR_CHANGED>
+Authorization: Token 754cbcf8a576b2174eb3d702f5b3f3024fbdc770
 ```
 
 ### Postman Operator Task
