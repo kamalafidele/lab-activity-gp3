@@ -1,8 +1,12 @@
-### auth_lab.http — Authentication Gauntlet Lab
-### Write your REST Client request blocks under each phase header.
-### Run a block with Ctrl+Alt+R (Windows/Linux) or Cmd+Alt+R (macOS).
-### Hint: all endpoints live under http://127.0.0.1:8000/api/
-### ─────────────────────────────────────────────────────────────────────────
+### Phase 1 — Basic Auth (unauthenticated)
+GET http://127.0.0.1:8000/api/basic/ HTTP/1.1
+
+###
+
+### Phase 1 — Basic Auth (with credentials)
+# REST Client encodes username:password in Base64 automatically
+GET http://127.0.0.1:8000/api/basic/ HTTP/1.1
+Authorization: Basic YWRtaW46YWRtaW4xMjM=
 
 
 ### ═══════════════════════════════════════════════════════════════════════════
