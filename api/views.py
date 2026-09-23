@@ -38,6 +38,9 @@ def basic_auth_view(request):
     auth_header = request.META.get('HTTP_AUTHORIZATION')
     print(f"Incoming Header: {auth_header}")
     return Response({"message": "Check your terminal!"})
+    # Reporter — Phase 1 challenge answers:
+    # Q1 answer (header format for admin:admin123):
+    # Q2 answer (what happens without credentials):
 
 
 # ─────────────────────────────────────────────────────────────────────────────
